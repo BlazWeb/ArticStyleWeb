@@ -1,0 +1,77 @@
+.explorar {
+    width: 100%;
+    min-height: calc(100vh - 8rem);
+    background: rgba(255, 255, 255, 0.800);
+
+    .container__explorar {
+        display: flex;
+        flex-direction: column;
+
+        .bar__buscador {
+            display: flex;
+            align-items: center;
+            height: 8rem;
+            width: 90%;
+            margin: 0 auto;
+
+            select {
+                width: 20rem;
+                height: 5.9rem;
+                outline: none;
+                cursor: pointer;
+                padding-left: 3rem;
+                border-radius: 5rem;
+                border: none;
+                font-size: 2.1rem;
+                appearance: none;
+                transition: .5s;
+
+                &:hover {
+                    padding-left: 4rem;
+
+                }
+
+                option {
+                    padding: 1rem;
+                    appearance: none;
+                    border-radius: 5rem;
+                }
+            }
+
+            .container__buscar {
+                width: 90rem;
+                display: flex;
+                align-items: center;
+
+                input {
+                    width: 70rem;
+                    height: 5.9rem;
+                    margin-left: 5rem;
+                    border-radius: 6rem 0 0 6rem;
+                    border: none;
+                    font-size: 2rem;
+                    padding-left: 2rem;
+                    outline: none;
+                }
+
+                button {
+                    width: 20rem;
+                    height: 5.9rem;
+                    border-radius: 0 6rem 6rem 0;
+                    background: white;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        width: .2rem;
+                        height: 5rem;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -.1rem;
+                        background: #333;
+                    }
+                }
+            }
+        }
+    }
+}
