@@ -1,6 +1,7 @@
 import { Component } from 'react'
-import { Link, Route } from 'react-router-dom'
-import style from 'styles/container__404.module.scss'
+import { Route } from 'react-router-dom'
+import style from 'styles/errorcuatro.module.scss'
+import logo from 'image/logo.png'
 
 export default class Error404 extends Component {
 
@@ -8,8 +9,15 @@ export default class Error404 extends Component {
         return (
             <Route path="*">
                 <div className={style.container__404}>
-                    <h1>404</h1>
-                    <p>La pagina <Link to={window.location.pathname}>{window.location.href}</Link> no existe</p>
+                    <div className={style.container}>
+                        <div className={style.logo}>
+                            <img src={logo} alt="" />
+                            <h1>Artic<span>Style</span> </h1>
+                        </div>
+                        <h2>404</h2>
+                        <p>La URL solicitada {window.location.pathname} no se encontró en este servidor.</p>
+
+                    </div>
                 </div>
             </Route>
         )
