@@ -14,9 +14,26 @@ html {
     box-sizing: inherit;
 }
 
-body{
-    background: linear-gradient(45deg, var(--colorPrimary) , var(--colorSecondary));
+body {
+    background: linear-gradient(45deg, var(--colorPrimary), var(--colorSecondary));
+
+    &::-webkit-scrollbar {
+        width: 1.2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--bgPrimary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(195, 195, 195);
+        border-radius: 40px;
+        border: 3px solid var(--bgPrimary);
+    }
+
 }
+
+
 
 img {
     max-width: 100%;
