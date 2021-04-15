@@ -1,0 +1,144 @@
+.site__login {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    .col_izq {
+        width: 30%;
+        background: linear-gradient(0deg, rgba(51, 51, 51, 0.700), rgba(51, 51, 51, 0.700)), url('https://media.discordapp.net/attachments/417053964425756673/832383144409432094/unknown.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 20rem;
+        }
+    }
+
+    .col_der {
+        width: 70%;
+        background: var(--bgPrimary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .registrate {
+            position: absolute;
+            top: 3rem;
+            right: 3rem;
+            font-size: 2rem;
+
+            a {
+                text-decoration: none;
+                color: var(--colorSecondary);
+            }
+        }
+
+        .login {
+            width: 60rem;
+            height: 60rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            .container__btn__login {
+                a {
+                    width: 40rem;
+                    height: 6rem;
+                    font-size: 1.5rem;
+                    background: var(--colorSecondary);
+
+                    &:last-of-type {
+                        width: 6rem;
+                        background: var(--bgTerciary);
+                        margin-left: 2rem;
+                    }
+                }
+            }
+
+            .separador {
+                width: 100%;
+                height: 1px;
+                background: var(--bgTerciary);
+                position: relative;
+                margin: 4rem 0;
+
+                &::after {
+                    content: 'Or';
+                    position: absolute;
+                    width: 10rem;
+                    background: var(--bgPrimary);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 50%;
+                    top: -1.5rem;
+                    font-size: 3rem;
+                    transform: translateX(-50%);
+                    color: var(--letras);
+                    font-weight: 300;
+                }
+            }
+
+            form {
+                width: 100%;
+                height: 40rem;
+
+                .usuarioInput {
+                    width: 100%;
+                    height: 10rem;
+
+                    p {
+                        font-size: 2rem;
+                        color: var(--letras);
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 6rem;
+                        border: none;
+                        background: var(--bgTerciary);
+                        outline: none;
+                        font-size: 2rem;
+                        padding: 0 2rem;
+                    }
+                }
+
+                .passwordInput {
+                    width: 100%;
+                    height: 17rem;
+
+                    p {
+                        font-size: 2rem;
+                        color: var(--letras);
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 6rem;
+                        border: none;
+                        background: var(--bgTerciary);
+                        outline: none;
+                        padding: 0 2rem;
+                        font-size: 2rem;
+
+                    }
+                }
+
+                .btn__login {
+                    width: 25rem;
+                    height: 5rem;
+                    font-size: 1.5rem;
+                    background: var(--colorSecondary);
+                }
+            }
+        }
+    }
+}

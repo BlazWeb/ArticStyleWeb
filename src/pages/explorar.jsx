@@ -1,21 +1,67 @@
 import { Component } from 'react'
 import style from 'styles/explorar.module.scss'
 import { Button } from '@material-ui/core'
-import {Link} from 'react-router-dom'
-
-import DownloadIcon from 'image/icon/download.svg'
-import HeartIcon from 'image/icon/heart.svg'
+import { Pagination } from '@material-ui/lab/'
 import CardExplorar from 'components/cardExplorar'
+import LoadingScreen from 'components/loading'
 
 export default class Explorar extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            pages: 4,
+            loading: true
+        }
+        if (parseInt(this.props.match.params.id)) {
+            if (this.state.pages < parseInt(this.props.match.params.id)) {
+                window.location.href = `/explore`
+            }
+        }
 
+        setTimeout(() => {
+            this.setState({
+                loading: false
+            })
+        }, 1000)
+    }
+
+    setPage() {
+        if (parseInt(this.props.match.params.id)) {
+            return parseInt(this.props.match.params.id)
+        } else {
+            return 1
+        }
+
+    }
+
+
+    handleChange = (event, value) => {
+        if (value === 1) {
+            window.location.href = `/explore`
+        } else {
+            window.location.href = `/explore/${value}`
+        }
+    };
+
+    renderPagination() {
+        if (this.state.pages !== 1) {
+            return (
+                <div className={style.pag__nav}>
+                    <Pagination count={this.state.pages} page={this.setPage()} onChange={this.handleChange} />
+                </div>
+            )
         }
     }
 
-    render() {
+    renderData() {
+        if (this.state.loading) {
+            return (
+                <div className={style.explorar}>
+                    <LoadingScreen />
+                </div>
+            )
+        }
+
         return (
             <div className={style.explorar}>
                 <div className={style.container__explorar}>
@@ -44,21 +90,24 @@ export default class Explorar extends Component {
                         </div>
                     </div>
                     <div className={style.row__search}>
-                        <CardExplorar/>
-                        <CardExplorar/>
-                        <CardExplorar/>
-                        <CardExplorar/>
-                        <CardExplorar/>
-                        <CardExplorar/>
-                        <CardExplorar/>
-                        <CardExplorar/>
+                        <CardExplorar />
+                        <CardExplorar />
+                        <CardExplorar />
+                        <CardExplorar />
+                        <CardExplorar />
+                        <CardExplorar />
+                        <CardExplorar />
+                        <CardExplorar />
                     </div>
-                    <div className={style.pag__nav}>
-                        <Link to="/explore">Pagina anterior</Link>
-                        <Link to="/explore">Pagina siguiente</Link>
-                    </div>
+                    {this.renderPagination()}
                 </div>
             </div>
         )
+    }
+
+    render() {
+
+        return this.renderData()
+
     }
 }

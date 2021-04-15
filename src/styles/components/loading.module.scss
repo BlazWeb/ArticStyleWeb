@@ -1,0 +1,11 @@
+.pantalla__carga{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: var(--bgPrimary);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

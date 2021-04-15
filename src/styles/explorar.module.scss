@@ -2,6 +2,7 @@
     width: 100%;
     min-height: calc(100vh - 8rem);
     background: rgba(255, 255, 255, 0.800);
+    position: relative;
 
     .container__explorar {
         display: flex;
@@ -16,7 +17,7 @@
 
             select {
                 width: 20rem;
-                height: 5.9rem;
+                height: 4.9rem;
                 outline: none;
                 cursor: pointer;
                 padding-left: 3rem;
@@ -45,7 +46,7 @@
 
                 input {
                     width: 80rem;
-                    height: 5.9rem;
+                    height: 4.9rem;
                     margin-left: 5rem;
                     border-radius: 6rem 0 0 6rem;
                     border: none;
@@ -56,7 +57,7 @@
 
                 button {
                     width: 30rem;
-                    height: 5.9rem;
+                    height: 4.9rem;
                     border-radius: 0 6rem 6rem 0;
                     background: white;
                     position: relative;
@@ -78,7 +79,7 @@
                     &::after {
                         content: '';
                         width: .2rem;
-                        height: 5rem;
+                        height: 4rem;
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
@@ -97,5 +98,24 @@
             margin: 0 auto;
 
         }
+
+        .pag__nav{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 12rem;
+            li{
+                button{
+                    svg{
+                        font-size: 3rem;
+                    }
+                    font-size: 2rem;
+
+                }
+            }
+        }
     }
+
 }

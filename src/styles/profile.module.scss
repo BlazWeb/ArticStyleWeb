@@ -1,0 +1,200 @@
+.site__profile {
+    width: 100%;
+
+    .container__profile {
+        width: 100%;
+        min-height: calc(100vh - 8rem);
+        position: relative;
+
+        .header__profile {
+            width: 100%;
+            height: 45rem;
+            background: var(--bgPrimary);
+
+            .container__image {
+                width: 100%;
+                height: calc(100% - 8rem);
+                background: #333;
+
+                .banner {
+                    width: 100%;
+                    border-radius: 0;
+                    height: 100%;
+                    font-size: 6rem;
+                }
+            }
+
+            .navegation__profile__first {
+                width: 100%;
+                height: 8rem;
+                padding: 0 10rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+
+                .datosProfileStats {
+                    width: 50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .stats {
+                        min-width: 7rem;
+                        font-size: 2rem;
+                        font-weight: 700;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        img {
+                            width: 3rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+
+                .btns_container {
+                    width: 50rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h1 {
+                        text-transform: capitalize;
+                        color: var(--letras);
+                        font-size: 2.5rem;
+                    }
+
+                    .btns {
+                        display: flex;
+                        align-items: center;
+
+                        .separador {
+                            width: 1px;
+                            height: 4rem;
+                            background: var(--letras);
+                            margin: 0 .5rem;
+                        }
+
+                        button {
+                            min-width: 15rem;
+                            min-height: 5rem;
+                            padding: 1rem;
+                            background: var(--colorSecondary);
+                            color: var(--letras2);
+                            font-size: 1.5rem;
+
+
+                            &.edit {
+                                min-width: 5rem;
+                                min-height: 5rem;
+                                padding: 1rem;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .avatar {
+                    position: absolute;
+                    bottom: -2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 25rem;
+                    height: 25rem;
+                    border: 10px solid var(--bgPrimary);
+                    border-radius: 100%;
+
+                    .avatarImage {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .content__profile {
+            width: 100%;
+            min-height: 100vh;
+            padding-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.781);
+            
+            input {
+                width: 50%;
+                margin: 0 auto;
+                height: 5rem;
+                border-radius: 4rem;
+                border: none;
+                outline: none;
+                padding: 0 4rem;
+                font-size: 2rem;
+            }
+
+            .contenedor__perfil {
+                width: 80%;
+                height: calc(100vh - 7rem);
+                display: flex;
+                flex-direction: column;
+                background: var(--bgPrimary);
+                margin: 4rem auto;
+                border-radius: 1rem;
+                overflow: hidden;
+
+                .navegador {
+                    width: 100%;
+                    height: 7rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    nav {
+                        width: 50%;
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            width: calc(100% / 4);
+                            height: 7rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-decoration: none;
+                            color: var(--letras);
+                            font-size: 2rem;
+                            position: relative;
+                            
+
+                            &.active{
+                                &::after{
+                                    content: '';
+                                    width: 100%;
+                                    height: .4rem;
+                                    position: absolute;
+                                    background: var(--colorSecondary);
+                                    bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .contenido__perfil{
+                    width: 100%;
+                    height: calc(100% - 7rem);
+                    position: relative;
+                    overflow: hidden;
+                    div{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}
